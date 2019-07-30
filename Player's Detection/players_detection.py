@@ -17,14 +17,14 @@ from utils import label_map_util
 from utils import visualization_utils as vis_util
 
 # This is needed since the notebook is stored in the object_detection folder.
-sys.path.append("D:/Coba 8/models/research/object_detection")
+sys.path.append(".../models/research/object_detection")
 
 # Path to frozen detection graph. This is the actual model that is used for the object detection.
 # Note: Model used for SSDLite_Mobilenet_v2
-PATH_TO_CKPT = 'D:/Coba 8/models/research/object_detection/inference_graph/frozen_inference_graph.pb'
+PATH_TO_CKPT = '.../models/research/object_detection/inference_graph/frozen_inference_graph.pb'
 
 # List of the strings that is used to add correct label for each box.
-PATH_TO_LABELS = 'D:/Coba 8/models/research/object_detection/training/labelmap.pbtxt'
+PATH_TO_LABELS = '.../models/research/object_detection/training/labelmap.pbtxt'
 
 NUM_CLASSES = 1
 
@@ -81,12 +81,12 @@ def detect_team(image, show = False):
     return 'not_sure'
 
 ## To View Color Mask
-filename = 'D:/Coba 7/models/research/object_detection/test.jpg'
+filename = '.../models/research/object_detection/test.jpg'
 image = cv2.imread(filename)
 resize = cv2.resize(image, (640,360))
 detect_team(resize, show=True)
 
-out = cv2.VideoWriter('D:/Coba 8/models/research/object_detection/output.avi',cv2.VideoWriter_fourcc('M','J','P','G'), 
+out = cv2.VideoWriter(.../models/research/object_detection/output.avi',cv2.VideoWriter_fourcc('M','J','P','G'), 
                       10, (640,360))
 
 filename = 'D:/Coba 8/models/research/object_detection/test.mp4'
